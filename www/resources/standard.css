@@ -1,0 +1,267 @@
+body {
+	text-align: center;
+}
+
+#container {
+	margin: 0 auto;
+	width: 800px;
+	background:#fff;
+	font-family: Helvetica;
+	text-align: left;
+}
+
+#container input {
+	background-color: #f6f6f6;
+}
+
+#container table {
+	margin: 0;
+	padding: 10px 0 0 0;
+	width: 100%;
+}
+
+#container th {
+	margin: 0;
+	padding: 6px 0 6px 0;
+	text-align: left;
+}
+
+#container td {
+	margin: 0;
+	padding: 6px 10px 6px 0;
+}
+
+#header {
+	background: #ccc;
+	padding: 20px;
+}
+
+#header h1 { margin: 0; }
+
+#name {
+	font-family: Arial Black;
+	font-size: 140%;
+}
+
+#description {
+	font-style: italic
+}
+
+#navigation {
+	float: left;
+	width: 800px;
+	background:#333;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+#navigation li a {
+	display: block;
+	float: left;
+	padding: 5px 20px;
+	color:#fff;
+	text-decoration: none;
+}
+
+#navigation li a:hover { background:#555; }
+
+#content {
+	clear: left;
+	padding: 20px;
+}
+
+#content h2 {
+	color:#000;
+	font-size: 160%;
+	margin: 0 0 .5em;
+}
+
+#footer {
+	background:#ccc;
+	text-align: right;
+	padding: 20px;
+	margin-top: 60px;
+}
+
+#alphaBar {
+	color: #999999;
+	border-bottom: 1px solid #999999;
+	display: block;
+	margin: 0;
+	padding: 15px 0 0 4px;
+	font-size: 18px;
+	font-variant: small-caps;
+}
+
+#alphaBar a {
+	margin: 0;
+	padding: 1px 4px 0 4px;
+	text-decoration: none;
+}
+
+#alphaBar a:link, 
+#alphaBar a:visited {
+	color: #999999;
+	background-color: #FFFFFF;
+	text-decoration: none;
+}
+
+#alphaBar a:hover, 
+#alphaBar a:focus {
+	color: #FFFFFF;
+	background-color: #999999;
+	text-decoration: none;
+}
+
+#alphaBar a:link.selectedChar, 
+#alphaBar a:visited.selectedChar, 
+#alphaBar a:hover.selectedChar, 
+#alphaBar a:focus.selectedChar {
+	color: #FFF;
+	background-color: #999999;
+	text-decoration: none;
+	margin: 0;
+	padding: 1px 4px 0 4px;
+}
+
+#pageBar {
+	color: #999999;
+	display: block;
+	margin: 0;
+	padding: 15px 0 0 4px;
+	font-size: 14px;
+	font-variant: small-caps;
+}
+
+#pageBar a {
+	margin: 0;
+	padding: 1px 4px 0 4px;
+	text-decoration: none;
+}
+
+#pageBar a:link, 
+#pageBar a:visited {
+	color: #999999;
+	background-color: #FFFFFF;
+	text-decoration: none;
+}
+
+#pageBar a:hover, 
+#pageBar a:focus {
+	color: #FFFFFF;
+	background-color: #999999;
+	text-decoration: none;
+}
+
+#pageBar a:link.selectedChar, 
+#pageBar a:visited.selectedChar, 
+#pageBar a:hover.selectedChar, 
+#pageBar a:focus.selectedChar {
+	color: #FFF;
+	background-color: #999999;
+	text-decoration: none;
+	margin: 0;
+	padding: 1px 4px 0 4px;
+}
+
+.listing {
+	width: 100%;
+}
+
+.infoMessage {
+	padding: 15px;
+	border: 1px solid green;
+	width: 75%;
+}
+
+.errorMessage {
+	padding: 15px;
+	border: 1px solid #c00;
+	color: #c00;
+	width: 75%;
+}
+
+.requiredField {
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.textFieldBackground {
+	background-color: #f6f6f6;
+}
+
+.rowEven {
+	background-color: #ffffff;
+}
+
+.rowOdd {
+	background-color: #e6e6e6;
+}
+
+.highlighted {
+	color: red;
+}
+
+.label {
+	width: 25%;
+	vertical-align: text-top;
+}
+
+.data {
+	font-weight: bold;
+}
+
+.metadataStatus {
+	width: 20px;
+}
+
+.qq-uploader { position:relative; width: 100%;}
+
+.qq-upload-button {
+    display:block; /* or inline-block */
+    width: 250px; padding: 7px 0; text-align:center;    
+    background:#880000; border-bottom:1px solid #ddd;color:#fff;
+}
+
+.qq-upload-button-hover {background:#cc0000;}
+
+.qq-upload-button-focus {outline:1px dotted black;}
+
+.qq-upload-drop-area {
+    position:absolute; top:0; left:0; width:100%; height:100%; min-height: 70px; z-index:2;
+    background:#FF9797; text-align:center; 
+}
+
+.qq-upload-drop-area span {
+    display:block; position:absolute; top: 50%; width:100%; margin-top:-8px; font-size:16px;
+}
+
+.qq-upload-drop-area-active {background:#FF7171;}
+
+.qq-upload-list {margin:15px 35px; padding:0; list-style:disc;}
+
+.qq-upload-list li { margin:0; padding:0; line-height:15px; font-size:12px;}
+
+.qq-upload-file, .qq-upload-spinner, .qq-upload-size, .qq-upload-cancel, .qq-upload-failed-text {
+    margin-right: 7px;
+}
+
+.qq-upload-file {}
+
+.qq-upload-spinner {display:inline-block; background: url("loading.gif"); width:15px; height:15px; vertical-align:text-bottom;}
+
+.qq-upload-size,.qq-upload-cancel {font-size:11px;}
+
+.qq-upload-failed-text {display:none;}
+
+.qq-upload-fail .qq-upload-failed-text {display:inline;}

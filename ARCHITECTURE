@@ -1,0 +1,29 @@
+System Architecture
+
+The Digital Storage System (DSS) is designed to be a centralized location for the 
+medium-term storage of digital objects.  The system provides for bitwise preservation,
+also known as fixity, meaning that the bits of the digital objects placed in the system 
+will remain intact.  The system uses an MD5 hash of each file to monitor file
+integrity.
+
+To ensure that file integrity can be maintained over a long period of time, the DSS uses
+three physically diverse server, also known as storage pods.  One server is
+designated as the primary server and digital objects are uploaded by the user to this
+server.  The other two servers act as hot backups.  Having three copies of every
+object on physically diverse servers provides a high level of digital preservation.
+
+Each server should be configured the same, with a separate filesystem for the storage of
+the digital objects that will placed there.  In addition, it is best to keep the
+document root for the DSS on this filesystem also so that the thumbnails and preview
+images that are created by the system are copied to the backup servers for save keeping.
+
+The method used to backup the servers is rsync -- a Unix utility that will examine and
+synchronize a remote filesystem with a primary filesystem.  The BACKUP shell script 
+provided performs this task.  Typically, the primary server is rsynced to the first
+backup server overnight.  The first backup server is then rsynced to the secondary
+backup server the next day.  This allows the primary server to be unloaded during the
+workday so that it remains responsive to users.
+
+The BACKUP shell script executes a PHP script to verify the checksum of every file in
+the DSS.  If the checksum for any file no longer matches what is in the database, the
+backup is cancelled and the administrators are notified by email.

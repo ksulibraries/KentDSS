@@ -1,0 +1,33 @@
+Digital Storage System (DSS) Installation Instructions
+
+The DSS requires:
+	PHP 5 or greater,
+	MySQL 5 or greater,
+	
+
+You should create a separate (HUGE) filesystem for the DSS to use.  This will allow you 
+to rsync the digital items placed on your primary storage system to your backup storage 
+systems.  See the ARCHITECTURE file for details.
+
+1.	Move the 'www' directory to the document root for your web server. This should be on  
+	the same filesystem where your digital items will live so that thumbnails and preview 
+	images are copied to your backup systems along with the files.
+	
+2.	Create the MySQL database that you will use. The default database name used in the 
+	configuration file is: DSS
+
+3.	Load the dss.sql file into the MySQL database that you just created.
+
+4.	Edit the configuration file: www/resources/inc.config.php  Each setting is described 
+	in that file.
+
+5.	Edit the utilities file: www/resources/inc.utilities.php and update the 
+	verify_password function so that it works properly for your institution.  The
+	default code will allow you to login as 'dssadmin' with a password of 'dssadmin'.
+	
+6.	Review and edit the sample automation shell scripts: backup.sh and backup_files.sh
+	A sample crontab file is provided as an example of how ofter to execute the various
+	automation scripts.
+
+7.	Read the Help files for more information about configuring the system via the Admin
+	menu.

@@ -1,0 +1,11 @@
+# see if there are any files to restore from a backup server
+00 *    * * *   root	/data/www/file_restore.php
+
+# backup this server
+00 23   * * *   root    /data/www/backup.sh
+
+# send out expiration warning emails
+00 1    * * *   root    /data/www/expiration_warning.php
+
+# create thumnails for objects that do not have them
+00 18	* * *	root	/data/www/create_thumbnails.php
